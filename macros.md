@@ -27,13 +27,31 @@ Vim macros are a powerful feature that allows you to record a sequence of comman
 ### Copy Line, Paste, and Increment Number
 
 1. Record Macro:
-   qayyp<c-a>q: Record a macro in register 'a' to yank a line, paste, and increment the number.
+
+- qayyp\<c-a\>q: Record a macro in register 'a' to yank a line, paste, and increment the number.
 
 2. Execute Macro:
-   @a: Execute the 'a' macro.
+
+- @a: Execute the 'a' macro.
 
 ```txt
 test 1 test
 test 2 test
 test 3 test
+```
+
+### Type into All First Line
+
+1. Record Macro:
+
+- qa0i- [] <c-c>jq: Record a macro in register 'a' to go in the first line, go to insert mode, start typing, back to normal mode, and move to next line.
+
+2. Execute Macro:
+
+- @a: Execute the 'a' macro.
+
+```txt
+item 1
+item 2
+item 3
 ```
